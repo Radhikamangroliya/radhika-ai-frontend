@@ -1,0 +1,71 @@
+/* ---------------------------------------------------------
+   global.css — Global reset + base styling
+   Human-written for Radhika’s AI Portfolio ⚡
+---------------------------------------------------------- */
+
+/* ========== RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #050813; /* deep AI background */
+  font-family: "Inter", "Poppins", sans-serif;
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+/* Remove blue tap highlight */
+button, a, input {
+  outline: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #4f75d5;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Page wrapper spacing below navbar */
+.page-wrapper {
+  padding-top: 120px;
+}
+
+/* Standard container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Utility spacing */
+.mt-20 { margin-top: 20px; }
+.mb-20 { margin-bottom: 20px; }
+
+/* Reusable neon border */
+.neon-border {
+  border: 1px solid var(--neon-border);
+  box-shadow: 0 0 12px var(--neon-glow);
+  backdrop-filter: blur(10px);
+}
+
+/* Text gradients */
+.text-glow {
+  background: linear-gradient(90deg, #78cfff, #e7a2ff);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 10px rgba(120, 200, 255, 0.6);
+}
+

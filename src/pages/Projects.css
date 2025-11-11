@@ -1,0 +1,185 @@
+/* ============================================= */
+/* PAGE WRAPPER — SAME AS ABOUT */
+/* ============================================= */
+
+.projects-wrapper {
+  padding: 120px 80px;
+  background: #0b0c10; /* ✅ same matte black as About */
+  color: white;
+}
+
+/* ============================================= */
+/* TITLES — SAME STYLE AS ABOUT */
+/* ============================================= */
+
+.projects-title {
+  font-size: 48px;
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #8ab4ff; /* SAME BLUE as Projects title */
+  text-shadow: 0 0 18px rgba(138, 180, 255, 0.55);
+}
+
+.projects-sub {
+  text-align: center;
+  font-size: 20px;
+  color: #b7cfff; /* ✅ same as About subtitle */
+  margin-bottom: 70px;
+}
+
+/* CATEGORY HEADER */
+.category-title {
+  font-size: 34px;
+  font-weight: 800;
+  margin: 40px 0 35px;
+  padding-left: 10px;
+  color: #cfe7ff; /* ✅ same blue family as About */
+  text-shadow: 0 0 16px #65b3ff; 
+  border-left: 4px solid #65b3ff; /* left glow bar */
+}
+
+/* ============================================= */
+/* PROJECT GLASS CARD — MATCH ABOUT SKILL CARDS */
+/* ============================================= */
+
+.project-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+
+  margin-bottom: 100px;
+  padding: 45px;
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.05);  /* ✅ same as Skill Card */
+  border: 1px solid rgba(120, 160, 255, 0.25); /* ✅ same border */
+  box-shadow: 0 0 15px rgba(90, 150, 255, 0.12); /* ✅ soft glow */
+  backdrop-filter: blur(20px);
+
+  transition: 0.3s;
+}
+
+/* Hover */
+.project-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 22px rgba(110, 180, 255, 0.35); /* ✅ same hover glow */
+  border-color: rgba(138, 180, 255, 0.4);
+}
+
+/* ============================================= */
+/* LEFT SIDE CONTENT — COLOR MATCH ABOUT TEXT */
+/* ============================================= */
+
+.project-left {
+  width: 50%;
+}
+
+.project-left h2,
+.project-left h3 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #e3edff; /* ✅ same as About body headings */
+}
+
+.project-desc {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #bcd4ff; /* ✅ similar to About paragraph color */
+}
+
+/* ============================================= */
+/* TAGS — MATCHING BLUE ACCENTS */
+/* ============================================= */
+
+.project-tags {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  background: rgba(120, 160, 255, 0.12);
+  border: 1px solid rgba(120, 160, 255, 0.4);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #cde7ff;
+}
+
+/* ============================================= */
+/* PROJECT BUTTON — MATCH ABOUT BUTTON */
+/* ============================================= */
+
+.project-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 28px;
+  background: rgba(50, 90, 255, 0.12);
+  border: 1px solid #6cb8ff;
+  color: #cde7ff;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.project-btn:hover {
+  background: rgba(60, 120, 255, 0.25);
+  box-shadow: 0 0 15px #79c0ff;
+  transform: translateY(-3px);
+}
+
+/* ============================================= */
+/* RIGHT SIDE IMAGE */
+/* ============================================= */
+
+.project-right {
+  width: 45%;
+}
+
+.project-right .img-tilt {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 16px;
+  perspective: 1000px;
+}
+
+.project-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 3D Hover */
+.img-tilt:hover img {
+  transform: rotateY(12deg) rotateX(6deg) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* ============================================= */
+/* RESPONSIVE */
+/* ============================================= */
+
+@media (max-width: 900px) {
+  .project-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .project-left,
+  .project-right {
+    width: 100%;
+  }
+
+  .category-title {
+    font-size: 28px;
+    padding-left: 5px;
+  }
+}

@@ -1,0 +1,175 @@
+/* ===== Background ===== */
+.about-container {
+  padding: 120px 80px;
+  background: #0b0c10; /* ✅ matte black */
+  color: white;
+}
+
+/* ===== Header ===== */
+.about-title {
+  font-size: 48px;
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #8ab4ff; /* SAME BLUE as Projects title */
+  text-shadow: 0 0 18px rgba(138, 180, 255, 0.55);
+}
+
+.about-sub {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 20px;
+  color: #b7cfff;
+}
+
+/* ===== Two Column Section ===== */
+.about-section {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.about-left {
+  width: 55%;
+}
+
+.section-title {
+  font-size: 28px;
+  color: #bde0ff;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #e3edff;
+  margin-bottom: 18px;
+}
+
+/* Button */
+.resume-button {
+  margin-top: 25px;
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 10px;
+  border: 1px solid #6cb8ff;
+  background: rgba(50, 90, 255, 0.12);
+  color: #cde7ff;
+  transition: 0.3s;
+}
+
+.resume-button:hover {
+  background: rgba(60, 120, 255, 0.25);
+  box-shadow: 0 0 15px #79c0ff;
+  transform: translateY(-3px);
+}
+
+/* Right Image */
+.about-right {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.about-3d-img {
+  width: 100%;
+  max-width: 420px;
+}
+
+/* ===== Stats ===== */
+.stats-row {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.stat-box {
+  padding: 28px;
+  width: 240px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(140, 180, 255, 0.25);
+  box-shadow: 0 0 25px rgba(100, 150, 255, 0.12);
+  text-align: center;
+  backdrop-filter: blur(6px);
+}
+
+.stat-box h3 {
+  font-size: 26px;
+  color: #d7ecff;
+}
+
+.stat-box p {
+  color: #a7c7ff;
+}
+
+/* ===== Skills ===== */
+.skills-title {
+  margin-top: 110px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 800;
+  color: #cfe7ff;
+  text-shadow: 0 0 16px #65b3ff;
+}
+
+/* Grid */
+.skills-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+}
+
+/* Card */
+.skill-card {
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(120, 160, 255, 0.25);
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 0 15px rgba(90, 150, 255, 0.12);
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 22px rgba(110, 180, 255, 0.35);
+}
+
+/* Icons — original colors preserved */
+.skill-icon {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.skill-card p {
+  font-size: 16px;
+  color: #e3edff;
+}
+/* ✅ 3D Avatar Entrance Animation */
+.about-3d-img {
+  width: 100%;
+  max-width: 430px;
+  opacity: 0;
+  transform: translateY(40px) scale(0.9);
+  animation: avatarEnter 1.2s ease-out forwards;
+}
+
+@keyframes avatarEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.9) rotate(-2deg);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-6px) scale(1.02) rotate(2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+}

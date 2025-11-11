@@ -1,0 +1,42 @@
+/* ---------------------------------------------------------
+   animations.css — Global animations for entire portfolio
+---------------------------------------------------------- */
+
+/* Fade In Up */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Fade In */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Floating effect for hero text */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Neon pulse */
+@keyframes neonPulse {
+  0% { box-shadow: 0 0 6px var(--neon-blue); }
+  50% { box-shadow: 0 0 20px var(--neon-blue), 0 0 30px var(--neon-purple); }
+  100% { box-shadow: 0 0 6px var(--neon-blue); }
+}
+
+/* Scanline effect for hero backgrounds */
+@keyframes scanline {
+  0% { opacity: 0.05; transform: translateY(-200%); }
+  100% { opacity: 0.15; transform: translateY(200%); }
+}
+
+/* Typing dots */
+@keyframes typingDots {
+  0% { opacity: 0.2; }
+  50% { opacity: 1; }
+  100% { opacity: 0.2; }
+}

@@ -1,0 +1,86 @@
+/* -------------------------------------------------------------
+   Navbar.css — Clean Neon Navigation (Transparent + Solid)
+-------------------------------------------------------------- */
+
+/* ✅ Base navbar container */
+.nav-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2000;
+  transition: background 0.3s ease, box-shadow 0.3s ease, border-bottom 0.3s ease;
+}
+
+/* ✅ Transparent navbar ONLY on Home page */
+.nav-transparent {
+  background: transparent;
+  border-bottom: none;
+  box-shadow: none;
+}
+
+/* ✅ Solid navbar for all other pages */
+.nav-solid {
+  background: rgba(5, 8, 20, 0.92);
+  border-bottom: 1px solid rgba(120, 180, 255, 0.18);
+  box-shadow: 0 0 16px rgba(120, 180, 255, 0.12);
+}
+
+/* -------------------------------------------------------------
+   Logo
+-------------------------------------------------------------- */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #76b9ff;
+  text-decoration: none;
+}
+
+.accent {
+  color: #bb86ff;
+}
+
+/* -------------------------------------------------------------
+   Navigation Links
+-------------------------------------------------------------- */
+.nav-right {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.nav-link {
+  color: #9cd3ff;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.active {
+  color: #ffffff;
+  text-shadow: 0 0 8px #6ab8ff;
+}
+
+/* -------------------------------------------------------------
+   Chat Button
+-------------------------------------------------------------- */
+.chat-btn {
+  padding: 8px 16px;
+  border: 1px solid #60a8ff;
+  border-radius: 8px;
+  color: #cfeaff;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.chat-btn:hover {
+  background: rgba(90, 140, 255, 0.2);
+  box-shadow: 0 0 10px #60a8ff;
+}

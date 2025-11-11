@@ -1,0 +1,104 @@
+/* ============================================= */
+/* PAGE CONTAINER (MATCH PROJECT PAGE) */
+/* ============================================= */
+.services-container {
+  padding: 120px 50px;
+  background: #060b18; /* same as projects */
+  color: white;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* ============================================= */
+/* PAGE TITLE (MATCH PROJECT TITLE) */
+/* ============================================= */
+.services-title {
+  font-size: 48px;
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #8ab4ff; /* SAME BLUE as Projects title */
+  text-shadow: 0 0 18px rgba(138, 180, 255, 0.55);
+}
+
+.services-sub {
+  text-align: center;
+  font-size: 18px;
+  color: #b5c9ff; /* Matches project subtitle */
+  margin-bottom: 70px;
+}
+
+/* ============================================= */
+/* GRID LAYOUT */
+/* ============================================= */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 55px;
+  margin-top: 20px;
+}
+
+/* ============================================= */
+/* SERVICE CARD (MATCH PROJECT CARDS EXACTLY) */
+/* ============================================= */
+.service-card {
+  padding: 42px;
+  border-radius: 22px;
+  
+  background: rgba(255,255,255,0.03); /* same glass as project */
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(20px);
+
+  color: #dce7ff; /* same font color as project headings */
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+/* Hover glow identical to project-section */
+.service-card:hover {
+  border-color: rgba(138, 180, 255, 0.25);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+  transform: translateY(-5px);
+}
+
+/* ============================================= */
+/* ICON */
+/* ============================================= */
+.service-icon {
+  font-size: 60px;
+  margin-bottom: 18px;
+  color: #8ab4ff; /* bluish tint like project tags */
+  text-shadow: 0 0 10px rgba(138, 180, 255, 0.5);
+}
+
+/* ============================================= */
+/* TITLE AND TEXT */
+/* ============================================= */
+.service-card h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #dce7ff; /* same heading color */
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #bcd4ff; /* same description color as project */
+  margin-top: 8px;
+}
+
+/* ============================================= */
+/* RESPONSIVE */
+/* ============================================= */
+@media (max-width: 768px) {
+  .services-container {
+    padding: 100px 25px;
+  }
+  .services-grid {
+    gap: 30px;
+  }
+  .service-card {
+    padding: 32px;
+  }
+}

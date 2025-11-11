@@ -1,0 +1,62 @@
+/* ---------------------------------------------------------
+   theme.css — Global variables for Neon AI theme
+---------------------------------------------------------- */
+
+:root {
+  /* ===== COLOR PALETTE ===== */
+  --bg-dark: #050813;
+  --bg-card: rgba(16, 30, 64, 0.75);
+  --bg-light: rgba(12, 20, 40, 0.55);
+
+  /* Text */
+  --text-primary: #dbe8ff;
+  --text-secondary: #9fc6ff;
+  --text-faded: #8fb4ff;
+
+  /* Neon */
+  --neon-blue: #5aa4ff;
+  --neon-purple: #bb86ff;
+  --neon-cyan: #78f3ff;
+  --neon-pink: #f27fff;
+
+  /* Glow */
+  --neon-glow: rgba(90, 150, 255, 0.45);
+  --neon-border: rgba(90, 150, 255, 0.4);
+
+  /* Buttons */
+  --btn-bg: rgba(80, 130, 255, 0.25);
+  --btn-border: #6bb6ff;
+
+  /* Transitions */
+  --fast: 0.25s ease;
+  --normal: 0.35s ease;
+}
+
+/* Reusable glass + neon effect */
+.glass-neon {
+  background: var(--bg-card);
+  border: 1px solid var(--neon-border);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 0 20px var(--neon-glow);
+  border-radius: 16px;
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 22px;
+  border-radius: 10px;
+  border: 1px solid var(--btn-border);
+  background: var(--btn-bg);
+  color: var(--text-primary);
+  transition: var(--normal);
+  cursor: pointer;
+}
+.btn:hover {
+  box-shadow: 0 0 14px var(--neon-blue);
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}

@@ -1,0 +1,69 @@
+/* -------------------------------------------------------------------
+   ProjectCard.css — Neon glowing card for projects
+   HUMAN DESIGN ✨
+-------------------------------------------------------------------- */
+
+.project-card {
+  background: rgba(16, 25, 60, 0.75);
+  border: 1px solid rgba(90, 150, 255, 0.4);
+  border-radius: 14px;
+  padding: 24px;
+  margin: 12px;
+  transition: 0.25s ease;
+  box-shadow: 0 0 12px rgba(70, 130, 255, 0.25);
+  backdrop-filter: blur(8px);
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 22px rgba(90, 160, 255, 0.55);
+  border-color: rgba(120, 180, 255, 0.6);
+}
+
+.project-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #d7e9ff;
+  margin-bottom: 10px;
+}
+
+.project-desc {
+  font-size: 15px;
+  color: #a8c6ff;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.project-tag {
+  background: rgba(80, 140, 255, 0.25);
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #cfe3ff;
+  border: 1px solid rgba(120, 180, 255, 0.35);
+}
+
+.project-btn {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: rgba(100, 150, 255, 0.2);
+  border: 1px solid rgba(120, 180, 255, 0.5);
+  color: #e6f3ff;
+  font-size: 14px;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.project-btn:hover {
+  background: rgba(120, 180, 255, 0.35);
+  box-shadow: 0 0 16px rgba(120, 180, 255, 0.6);
+}

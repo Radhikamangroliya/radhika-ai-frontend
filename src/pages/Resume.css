@@ -1,0 +1,272 @@
+/* ============================================================
+   Universal Neon Theme — Resume + Contact Page
+   Perfectly matches About / Projects / Services dark UI
+============================================================ */
+
+/* PAGE WRAPPER */
+.resume-page,
+.contact-page {
+  padding: 120px 50px;
+  background: #060b18;
+  color: #d9eaff;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* ============================================================
+   TITLES + SUBTITLES
+============================================================ */
+
+.resume-title,
+.contact-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #8ab4ff;
+  text-shadow: 0 0 18px rgba(138, 180, 255, 0.6);
+  margin-bottom: 10px;
+}
+
+.resume-sub,
+.contact-sub {
+  font-size: 18px;
+  color: #b5c9ff;
+  margin-bottom: 60px;
+}
+
+/* ============================================================
+   MAIN CARD (Glassmorphism)
+============================================================ */
+
+.resume-card,
+.contact-card {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: flex;
+  gap: 40px;
+
+  padding: 45px;
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+
+  box-shadow: 0 0 40px rgba(138, 180, 255, 0.15);
+  text-align: left;
+}
+
+/* LEFT + RIGHT COLUMNS */
+.resume-card-left,
+.resume-card-right,
+.contact-left,
+.contact-right {
+  flex: 1;
+}
+
+/* HEADING INSIDE CARDS */
+.section-title {
+  font-size: 22px;
+  color: #dce7ff;
+  margin-top: 28px;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(138, 180, 255, 0.4);
+}
+
+.role,
+.contact-role {
+  margin-top: 6px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #8dd6ff;
+}
+
+/* LISTS */
+.contact-list,
+.highlight-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+}
+
+.contact-list li,
+.highlight-list li {
+  margin-bottom: 8px;
+  color: #bcd4ff;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ============================================================
+   EXPERIENCE BLOCKS
+============================================================ */
+.exp-block {
+  margin-top: 22px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.exp-date {
+  font-size: 14px;
+  color: #9fbaff;
+  margin-bottom: 8px;
+}
+
+.exp-block p {
+  color: #c9dbff;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* ============================================================
+   FORM FIELDS (Contact Page)
+============================================================ */
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 18px;
+
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.06);
+  color: #e0ecff;
+
+  font-size: 15px;
+  outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #9bb4d7;
+}
+
+.form-row {
+  display: flex;
+  gap: 18px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* ============================================================
+   BUTTONS (View PDF / Download PDF / Send Message)
+============================================================ */
+
+.resume-buttons {
+  margin-top: 55px;
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+
+  border: 1px solid #8ab4ff;
+  color: #dceaff;
+
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: rgba(138, 180, 255, 0.18);
+  box-shadow: 0 0 15px rgba(138, 180, 255, 0.4);
+  transform: translateY(-4px);
+}
+
+.view { border-color: #8ab4ff; }
+.download { border-color: #c38eff; }
+.send { border-color: #79e3ff; }
+
+/* ============================================================
+   PDF VIEWER
+============================================================ */
+
+.resume-viewer {
+  margin: 50px auto 0;
+  width: 100%;
+  max-width: 900px;
+  height: 680px;
+
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 25px rgba(138, 180, 255, 0.1);
+  overflow: hidden;
+}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 900px) {
+  .resume-card,
+  .contact-card {
+    flex-direction: column;
+    padding: 35px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .resume-title,
+  .contact-title {
+    font-size: 38px;
+  }
+  .resume-card,
+  .contact-card {
+    padding: 28px;
+  }
+  .resume-viewer {
+    height: 520px;
+  }
+}
+.social-row {
+  display: flex;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.social-row a {
+  font-size: 32px;
+  color: #bcd4ff;
+  transition: 0.3s;
+}
+
+.social-row a:hover {
+  color: #8ab4ff;
+  transform: translateY(-4px);
+}
+/* Improve spacing in Contact Left Block */
+.contact-left h2 {
+  margin-bottom: 10px;     /* spacing below name */
+  line-height: 1.4;
+}
+
+.contact-role {
+  margin-bottom: 20px !important;  /* spacing below job title */
+  line-height: 1.5;
+}
+
+.contact-list li {
+  margin-bottom: 14px !important;  /* bigger gap between phone/email/location */
+  line-height: 1.6;
+}
+
+.social-row {
+  margin-top: 25px !important;  /* spacing above social icons */
+}

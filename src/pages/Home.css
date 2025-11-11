@@ -1,0 +1,225 @@
+/* -------------------------------------------------------------
+   Home.css — Final Hero Layout + Parallax + Neon Contact Button
+-------------------------------------------------------------- */
+
+.home-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 150px 100px 0 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+  background: #050813;
+}
+
+/* ============================
+   Background Layers
+=============================== */
+
+.background-layers {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.stars-bg,
+.grid-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease-out;
+  pointer-events: none;
+}
+
+/* Stars */
+.stars-bg {
+  background-image: url("/src/assets/bg/stars-bg.png");
+  opacity: 0.25;
+}
+
+/* Neon grid */
+.grid-bg {
+  background-image: url("/src/assets/bg/neon-grid-bg.png");
+  opacity: 0.35;
+  background-position: bottom;
+}
+
+/* ============================
+   Floating Particles
+=============================== */
+
+.particles-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: #90d9ff;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: floatParticle linear infinite;
+}
+
+@keyframes floatParticle {
+  0% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-40px) translateX(20px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.3;
+  }
+}
+
+/* ============================
+   Left Hero Section
+=============================== */
+
+.hero-left {
+  z-index: 5;
+}
+
+.hero-title {
+  font-size: 90px;
+  font-weight: 800;
+  line-height: 0.9;
+  color: #b7d9ff;
+  text-shadow: 0 0 30px #68aee8;
+}
+
+.hero-subtitle {
+  margin-top: 30px;
+  font-size: 26px;
+  color: #86d7ff;
+}
+
+.hero-tagline {
+  margin-top: 25px;
+  font-size: 22px;
+  color: #cf8aff;
+}
+
+/* ✅ CONTACT BUTTON — NEON BLUE GLOW */
+.contact-btn {
+  margin-top: 35px;
+  padding: 14px 32px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #e6f3ff;
+  background: rgba(30, 58, 138, 0.45);
+  border: 2px solid #7bc6ff;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  backdrop-filter: blur(8px);
+  text-shadow: 0 0 8px #7bc6ff;
+  box-shadow: 0 0 18px rgba(123, 198, 255, 0.45);
+}
+
+.contact-btn:hover {
+  background: rgba(50, 90, 180, 0.55);
+  box-shadow: 0 0 25px #9ad4ff;
+  border-color: #b5e5ff;
+  transform: translateY(-2px);
+}
+
+/* ============================
+   AI CARD
+=============================== */
+
+.hero-ai-card {
+  width: 340px;
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  background: rgba(10, 20, 60, 0.25);
+  border: 1px solid #5d29ff;
+  box-shadow: 0 0 25px rgba(118, 17, 255, 0.55);
+  text-align: center;
+  z-index: 5;
+}
+
+.ai-title {
+  color: #8dd5ff;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.ai-circle {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 1px solid #7840ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #9fdfff;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.ai-desc {
+  font-size: 18px;
+  color: #dcd2ff;
+  margin-bottom: 20px;
+}
+
+.ai-ask-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #8e4bff;
+  background: rgba(100, 30, 255, 0.15);
+  color: #c6a3ff;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.ai-ask-btn:hover {
+  background: rgba(140, 64, 255, 0.25);
+  box-shadow: 0 0 15px #8e4bff;
+}
+
+/* ============================
+   Responsive
+=============================== */
+
+@media (max-width: 900px) {
+  .home-wrapper {
+    flex-direction: column;
+    text-align: center;
+    padding: 120px 20px;
+    height: auto;
+  }
+
+  .hero-ai-card {
+    margin-top: 50px;
+  }
+}
+.ai-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 3px solid #8d5bff;
+  box-shadow: 0 0 25px rgba(145, 90, 255, 0.5);
+  object-fit: cover;
+  margin: 20px auto;
+  display: block;
+}

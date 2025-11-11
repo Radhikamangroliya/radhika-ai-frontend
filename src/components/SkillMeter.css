@@ -1,0 +1,56 @@
+/* -------------------------------------------------------------------
+   SkillMeter.css — glowing circular skill meter for Skills.jsx
+-------------------------------------------------------------------- */
+
+.skillmeter-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 18px;
+}
+
+.skillmeter-circle {
+  width: 110px;
+  height: 110px;
+  position: relative;
+}
+
+.skillmeter-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.bg-ring {
+  fill: none;
+  stroke: rgba(90, 150, 255, 0.18);
+  stroke-width: 10;
+}
+
+.progress-ring {
+  fill: none;
+  stroke: #6eb6ff;
+  stroke-width: 10;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.3s ease-out;
+  filter: drop-shadow(0 0 6px #6eb6ff);
+}
+
+.skillmeter-value {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: #d9ecff;
+  text-shadow: 0 0 8px rgba(120, 180, 255, 0.7);
+}
+
+.skillmeter-label {
+  margin-top: 12px;
+  font-size: 15px;
+  color: #bcd8ff;
+  text-align: center;
+}

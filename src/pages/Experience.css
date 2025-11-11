@@ -1,0 +1,71 @@
+/* ============================================================
+   EXPERIENCE PAGE — Matches SERVICES + PROJECTS Theme
+   Clean • Minimal • Professional
+============================================================ */
+
+/* PAGE WRAPPER */
+.experience-wrapper {
+  padding: 120px 50px;
+  min-height: 100vh;
+  background: #060b18; /* same as services/projects */
+  color: white;
+}
+
+/* HEADER */
+.experience-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.experience-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #8ab4ff; 
+  text-shadow: 0 0 18px rgba(138, 180, 255, 0.6);
+  margin-bottom: 10px;
+}
+
+.experience-subtitle {
+  font-size: 18px;
+  color: #b5c9ff;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+
+/* SECTION HEADINGS (Work + Education) */
+.section-label {
+  font-size: 32px;
+  font-weight: 700;
+  color: #dce7ff;
+  margin: 50px 0 25px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-icon {
+  font-size: 28px;
+  color: #8ab4ff;
+  text-shadow: 0 0 10px rgba(138, 180, 255, 0.4);
+}
+
+/* TIMELINE WRAPPER */
+.experience-timeline-section {
+  margin-top: 30px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .experience-wrapper {
+    padding: 100px 30px;
+  }
+
+  .experience-title {
+    font-size: 40px;
+  }
+
+  .section-label {
+    font-size: 26px;
+  }
+}
