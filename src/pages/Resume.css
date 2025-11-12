@@ -1,7 +1,6 @@
 /* ============================================================
-   Universal Neon Theme — Resume + Contact Page
-   Perfectly matches About / Projects / Services dark UI
-============================================================ */
+   🌌 RADHIKA AI PORTFOLIO — Resume + Contact Page (Neon Dark Theme)
+   ============================================================ */
 
 /* PAGE WRAPPER */
 .resume-page,
@@ -11,6 +10,7 @@
   color: #d9eaff;
   text-align: center;
   min-height: 100vh;
+  scroll-behavior: smooth;
 }
 
 /* ============================================================
@@ -55,6 +55,12 @@
 
   box-shadow: 0 0 40px rgba(138, 180, 255, 0.15);
   text-align: left;
+  transition: 0.3s ease;
+}
+
+.resume-card:hover,
+.contact-card:hover {
+  box-shadow: 0 0 45px rgba(138, 180, 255, 0.3);
 }
 
 /* LEFT + RIGHT COLUMNS */
@@ -65,7 +71,7 @@
   flex: 1;
 }
 
-/* HEADING INSIDE CARDS */
+/* HEADINGS */
 .section-title {
   font-size: 22px;
   color: #dce7ff;
@@ -82,43 +88,45 @@
   color: #8dd6ff;
 }
 
-/* LISTS */
-.contact-list,
-.highlight-list {
+/* ============================================================
+   CONTACT INFO LIST
+============================================================ */
+
+.contact-list {
   list-style: none;
   padding: 0;
   margin: 12px 0;
 }
 
-.contact-list li,
-.highlight-list li {
-  margin-bottom: 8px;
+.contact-list li {
+  margin-bottom: 14px;
   color: #bcd4ff;
   font-size: 15px;
   display: flex;
   align-items: center;
   gap: 10px;
+  line-height: 1.6;
 }
 
 /* ============================================================
-   EXPERIENCE BLOCKS
+   SOCIAL ICONS
 ============================================================ */
-.exp-block {
-  margin-top: 22px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+.social-row {
+  display: flex;
+  gap: 18px;
+  margin-top: 25px;
 }
 
-.exp-date {
-  font-size: 14px;
-  color: #9fbaff;
-  margin-bottom: 8px;
+.social-row a {
+  font-size: 32px;
+  color: #bcd4ff;
+  transition: 0.3s ease;
 }
 
-.exp-block p {
-  color: #c9dbff;
-  line-height: 1.6;
-  font-size: 15px;
+.social-row a:hover {
+  color: #8ab4ff;
+  transform: translateY(-4px);
 }
 
 /* ============================================================
@@ -130,14 +138,13 @@
   width: 100%;
   padding: 14px 18px;
   margin-bottom: 18px;
-
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   background: rgba(255, 255, 255, 0.06);
   color: #e0ecff;
-
   font-size: 15px;
   outline: none;
+  transition: 0.3s ease;
 }
 
 .contact-form input::placeholder,
@@ -145,6 +152,13 @@
   color: #9bb4d7;
 }
 
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #8ab4ff;
+  box-shadow: 0 0 8px rgba(138, 180, 255, 0.3);
+}
+
+/* Row alignment for name/email */
 .form-row {
   display: flex;
   gap: 18px;
@@ -155,7 +169,7 @@
 }
 
 /* ============================================================
-   BUTTONS (View PDF / Download PDF / Send Message)
+   BUTTONS (View / Download / Send)
 ============================================================ */
 
 .resume-buttons {
@@ -172,10 +186,8 @@
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
-
   border: 1px solid #8ab4ff;
   color: #dceaff;
-
   transition: 0.3s ease;
   cursor: pointer;
 }
@@ -186,9 +198,44 @@
   transform: translateY(-4px);
 }
 
-.view { border-color: #8ab4ff; }
-.download { border-color: #c38eff; }
-.send { border-color: #79e3ff; }
+.view {
+  border-color: #8ab4ff;
+}
+
+.download {
+  border-color: #c38eff;
+}
+
+.send {
+  border-color: #79e3ff;
+}
+
+/* ============================================================
+   SUCCESS MESSAGE / ALERT (Optional for Formspree)
+============================================================ */
+
+.success-message {
+  background: rgba(100, 255, 180, 0.08);
+  color: #79ffb0;
+  padding: 12px 20px;
+  border: 1px solid rgba(100, 255, 180, 0.2);
+  border-radius: 10px;
+  font-size: 15px;
+  margin-top: 20px;
+  text-align: center;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 /* ============================================================
    PDF VIEWER
@@ -199,7 +246,6 @@
   width: 100%;
   max-width: 900px;
   height: 680px;
-
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 0 25px rgba(138, 180, 255, 0.1);
@@ -207,7 +253,7 @@
 }
 
 /* ============================================================
-   RESPONSIVE
+   RESPONSIVE DESIGN
 ============================================================ */
 
 @media (max-width: 900px) {
@@ -234,39 +280,4 @@
   .resume-viewer {
     height: 520px;
   }
-}
-.social-row {
-  display: flex;
-  gap: 18px;
-  margin-top: 20px;
-}
-
-.social-row a {
-  font-size: 32px;
-  color: #bcd4ff;
-  transition: 0.3s;
-}
-
-.social-row a:hover {
-  color: #8ab4ff;
-  transform: translateY(-4px);
-}
-/* Improve spacing in Contact Left Block */
-.contact-left h2 {
-  margin-bottom: 10px;     /* spacing below name */
-  line-height: 1.4;
-}
-
-.contact-role {
-  margin-bottom: 20px !important;  /* spacing below job title */
-  line-height: 1.5;
-}
-
-.contact-list li {
-  margin-bottom: 14px !important;  /* bigger gap between phone/email/location */
-  line-height: 1.6;
-}
-
-.social-row {
-  margin-top: 25px !important;  /* spacing above social icons */
 }
