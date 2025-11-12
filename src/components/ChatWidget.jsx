@@ -39,7 +39,7 @@ export default function ChatWidget() {
     setIsLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:8000/ask", {
+      const res = await axios.post("https://radhika-ai-backend.onrender.com/ask", {
         question: userMessage.text,
       });
 
