@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import axios from "axios";
 import ReactMarkdown from "react-markdown";
-const avatar = "/ai-avatar.png";
+const avatar = import.meta.env.BASE_URL + "ai-avatar.png";
 
 import "./ChatWidget.css";
 

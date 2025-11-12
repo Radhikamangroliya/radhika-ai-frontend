@@ -73,7 +73,7 @@ export default function Home() {
       <section className="hero-ai-card">
         <h3 className="ai-title">RADHIKA 2.0</h3>
 
-        <img src="/src/assets/ai-avatar.png" alt="AI Avatar" className="ai-avatar" />
+        <img src="/ai-avatar.png" alt="AI Avatar" className="ai-avatar" />
 
         <p className="ai-desc">
           Hello! Ask me anything about Radhika.
