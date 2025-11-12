@@ -17,11 +17,6 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // ✅ Open Resume page safely (works on Vercel & localhost)
-  const goToContact = () => {
-    window.open("/resume", "_self"); // open Resume.jsx in same tab
-  };
-
   // ✅ Trigger chat widget
   const openChat = () => {
     window.dispatchEvent(new Event("open-chat"));
@@ -63,10 +58,7 @@ export default function Home() {
           Building intelligent systems & human-centered experiences.
         </p>
 
-        {/* ✅ Smooth and safe link */}
-        <button className="contact-btn" onClick={goToContact}>
-          Contact Me →
-        </button>
+        {/* 🚫 Contact Button Removed */}
       </section>
 
       {/* RIGHT AI CARD */}
