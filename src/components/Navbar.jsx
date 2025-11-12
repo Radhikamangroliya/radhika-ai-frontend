@@ -1,17 +1,16 @@
 // -------------------------------------------------------------------
-// Navbar.jsx — Auto Transparent on Home, Solid on Other Pages
+// Navbar.jsx — Transparent on Home, Solid on Others + Mobile Menu
 // -------------------------------------------------------------------
 
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
-  // ✅ Transparent ONLY on home page
   const isHome = location.pathname === "/";
-
   const containerClass = isHome
     ? "nav-container nav-transparent"
     : "nav-container nav-solid";
@@ -27,14 +26,22 @@ export default function Navbar() {
         </Link>
       </div>
 
-      <div className="nav-right">
-        <Link className={isActive("/about")} to="/about">About</Link>
-        <Link className={isActive("/projects")} to="/projects">Projects</Link>
-        <Link className={isActive("/experience")} to="/experience">Experience</Link>
-        <Link className={isActive("/services")} to="/services">Services</Link>
-        <Link className={isActive("/resume")} to="/resume">Resume</Link>
+      {/* Toggle button (visible on phones) */}
+      <div
+        className="nav-toggle"
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle navigation"
+      >
+        ☰
+      </div>
 
-        {/* ❌ REMOVED CHAT BUTTON */}
+      {/* Links */}
+      <div className={`nav-right ${menuOpen ? "open" : ""}`}>
+        <Link onClick={() => setMenuOpen(false)} className={isActive("/about")} to="/about">About</Link>
+        <Link onClick={() => setMenuOpen(false)} className={isActive("/projects")} to="/projects">Projects</Link>
+        <Link onClick={() => setMenuOpen(false)} className={isActive("/experience")} to="/experience">Experience</Link>
+        <Link onClick={() => setMenuOpen(false)} className={isActive("/services")} to="/services">Services</Link>
+        <Link onClick={() => setMenuOpen(false)} className={isActive("/resume")} to="/resume">Resume</Link>
       </div>
     </nav>
   );
