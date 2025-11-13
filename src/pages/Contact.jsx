@@ -4,7 +4,7 @@
 // -------------------------------------------------------------
 
 import React from "react";
-import "./Resume.css";
+import "./Contact.css";
 import {
   FaPhone,
   FaEnvelope,
@@ -13,7 +13,7 @@ import {
   FaGithub,
 } from "react-icons/fa";
 
-export default function Resume() {
+export default function Contact() {
   return (
     <div className="contact-page">
       {/* Title */}
@@ -94,22 +94,7 @@ export default function Resume() {
         </div>
       </div>
 
-      {/* ✅ Resume Buttons */}
-      <div className="resume-buttons">
-        <a href="/resume.pdf" target="_blank" className="btn view">
-          View PDF
-        </a>
-        <a href="/resume.pdf" download className="btn download">
-          Download PDF
-        </a>
-      </div>
-
-      {/* ✅ PDF Viewer */}
-      <iframe
-        src="/resume.pdf"
-        className="resume-viewer"
-        title="Resume PDF"
-      ></iframe>
+    
     </div>
   );
 }

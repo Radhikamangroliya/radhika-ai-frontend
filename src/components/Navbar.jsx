@@ -41,7 +41,7 @@ export default function Navbar() {
         <Link onClick={() => setMenuOpen(false)} className={isActive("/projects")} to="/projects">Projects</Link>
         <Link onClick={() => setMenuOpen(false)} className={isActive("/experience")} to="/experience">Experience</Link>
         <Link onClick={() => setMenuOpen(false)} className={isActive("/services")} to="/services">Services</Link>
-        <Link onClick={() => setMenuOpen(false)} className={isActive("/resume")} to="/resume">Resume</Link>
+        <Link onClick={() => setMenuOpen(false)} className={isActive("/contact")} to="/contact">Contact</Link>
       </div>
     </nav>
   );

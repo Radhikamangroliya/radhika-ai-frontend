@@ -1,17 +1,229 @@
 /* ============================================================
-   EXPERIENCE PAGE — Matches SERVICES + PROJECTS Theme
-   Clean • Minimal • Professional
+   MINI TIMELINE — DESKTOP
 ============================================================ */
+.timeline-container {
+  position: relative;
+  width: 80%;
+  margin: 80px auto 120px;
+}
 
-/* PAGE WRAPPER */
+.timeline-container::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(138,180,255,0.45),
+    rgba(138,180,255,0.1)
+  );
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 40px 50px;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+/* Circle Dots */
+.timeline-item .circle {
+  position: absolute;
+  top: 25px;
+  right: -10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #8ab4ff;
+  box-shadow: 0 0 20px #8ab4ff;
+}
+.timeline-item.right .circle {
+  left: -10px;
+  right: auto;
+}
+
+/* Typography */
+.mini-content {
+  line-height: 1.8;
+  letter-spacing: 0.2px;
+}
+.mini-content h4 {
+  color: #dce7ff;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.mini-content p {
+  color: #a8c4ff;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   DETAILS SECTION (CARD VIEW)
+============================================================ */
+.detail-section {
+  width: 90%;
+  margin: 0 auto 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.detail-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(138,180,255,0.25);
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: 0 0 20px rgba(138,180,255,0.1);
+  line-height: 1.8;
+  letter-spacing: 0.2px;
+}
+
+.detail-card h3 {
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.detail-card h4 {
+  color: #a8c4ff;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.detail-card p {
+  font-size: 15.5px;
+  color: #d9e4ff;
+  margin: 10px 0 20px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tags span {
+  background: rgba(120,160,255,0.15);
+  border: 1px solid rgba(120,160,255,0.4);
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #cde2ff;
+  transition: all 0.3s ease;
+}
+
+.tags span:hover {
+  background: rgba(138,180,255,0.3);
+  transform: scale(1.05);
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE PERFECT
+============================================================ */
+@media (max-width: 768px) {
+
+  .timeline-container {
+    width: 92% !important;
+    margin: 40px auto !important;
+    padding-left: 25px !important;
+  }
+
+  .timeline-container::before {
+    left: 15px !important;
+    width: 2px !important;
+    background: linear-gradient(
+      to bottom,
+      rgba(138,180,255,0.7),
+      rgba(138,180,255,0.2)
+    ) !important;
+  }
+
+  .timeline-item {
+    width: 100% !important;
+    left: 0 !important;
+    text-align: left !important;
+    padding: 22px 0 22px 45px !important;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0 !important;
+  }
+
+  .timeline-item .circle {
+    left: 6px !important;
+    right: auto !important;
+    width: 14px !important;
+    height: 14px !important;
+    top: 12px !important;
+    box-shadow: 0 0 12px rgba(138,180,255,0.9) !important;
+  }
+
+  .mini-content h4 {
+    font-size: 15px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .mini-content p {
+    font-size: 13px !important;
+  }
+
+  .timeline-item:not(:last-child) {
+    margin-bottom: 28px !important;
+  }
+
+  .detail-section {
+    margin: 40px auto !important;
+    gap: 28px !important;
+    padding: 0 10px !important;
+  }
+
+  .detail-card {
+    padding: 20px !important;
+  }
+
+  .detail-card h3 {
+    font-size: 18px !important;
+  }
+
+  .detail-card h4 {
+    font-size: 15px !important;
+  }
+
+  .detail-card p {
+    font-size: 14px !important;
+  }
+
+  .tags span {
+    font-size: 12px !important;
+    padding: 4px 8px !important;
+  }
+}
+
+/* ============================================================
+   PAGE WRAPPER + HEADERS
+============================================================ */
 .experience-wrapper {
   padding: 120px 50px;
-  min-height: 100vh;
-  background: #060b18; /* same as services/projects */
+  background: #060b18;
   color: white;
 }
 
-/* HEADER */
 .experience-header {
   text-align: center;
   margin-bottom: 60px;
@@ -20,9 +232,8 @@
 .experience-title {
   font-size: 48px;
   font-weight: 800;
-  color: #8ab4ff; 
-  text-shadow: 0 0 18px rgba(138, 180, 255, 0.6);
-  margin-bottom: 10px;
+  color: #8ab4ff;
+  text-shadow: 0 0 18px rgba(138,180,255,0.6);
 }
 
 .experience-subtitle {
@@ -30,42 +241,22 @@
   color: #b5c9ff;
   max-width: 800px;
   margin: 0 auto;
-  line-height: 1.65;
+  line-height: 1.7;
 }
 
-/* SECTION HEADINGS (Work + Education) */
+/* Section labels */
 .section-label {
   font-size: 32px;
   font-weight: 700;
   color: #dce7ff;
-  margin: 50px 0 25px;
   display: flex;
   align-items: center;
   gap: 12px;
+  margin: 60px 0 30px;
 }
 
 .section-icon {
   font-size: 28px;
   color: #8ab4ff;
-  text-shadow: 0 0 10px rgba(138, 180, 255, 0.4);
-}
-
-/* TIMELINE WRAPPER */
-.experience-timeline-section {
-  margin-top: 30px;
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .experience-wrapper {
-    padding: 100px 30px;
-  }
-
-  .experience-title {
-    font-size: 40px;
-  }
-
-  .section-label {
-    font-size: 26px;
-  }
+  text-shadow: 0 0 10px rgba(138,180,255,0.4);
 }

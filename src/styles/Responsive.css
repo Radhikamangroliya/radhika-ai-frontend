@@ -1,138 +1,108 @@
-/* 🌐 UNIVERSAL MOBILE FIXES */
-@media (max-width: 1024px) {
-  section,
-  .home-wrapper,
-  .about-container,
-  .projects-wrapper,
-  .services-container,
-  .resume-page,
-  .contact-page,
-  .experience-wrapper {
-    padding: 80px 30px !important;
+/* ===================== RESPONSIVE (Improved Mobile View) ===================== */
+@media (max-width: 768px) {
+  /* Hide center line, switch to left-aligned vertical line */
+  .timeline-container {
+    width: 90%;
+    margin: 40px auto;
+    padding-left: 25px;
+    position: relative;
   }
 
-  h1, .about-title, .projects-title, .services-title,
-  .resume-title, .contact-title, .experience-title {
-    font-size: 38px !important;
+  .timeline-container::before {
+    left: 10px;
+    width: 2px;
+    background: linear-gradient(to bottom, rgba(138,180,255,0.5), rgba(138,180,255,0.05));
+    height: 100%;
+    transform: none;
   }
 
-  h2, h3, .section-label {
-    font-size: 26px !important;
+  /* Stack items cleanly */
+  .timeline-item {
+    width: 100%;
+    padding: 20px 0 20px 25px;
+    text-align: left;
+    position: relative;
   }
 
-  p, li {
-    font-size: 16px !important;
-    line-height: 1.6;
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0;
+  }
+
+  /* Blue glowing dots aligned left */
+  .timeline-item .circle {
+    left: -4px;
+    right: auto;
+    width: 14px;
+    height: 14px;
+    top: 10px;
+    background: #8ab4ff;
+    box-shadow: 0 0 15px rgba(138, 180, 255, 0.8);
+  }
+
+  /* Company name + date formatting */
+  .mini-content h4 {
+    font-size: 15px;
+    color: #e5edff;
+    font-weight: 600;
+  }
+
+  .mini-content p {
+    font-size: 13px;
+    color: #a8c4ff;
+    margin-top: 4px;
+  }
+
+  /* Add spacing between each timeline block */
+  .timeline-item:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  /* Detail section (cards) */
+  .detail-section {
+    margin: 40px auto 80px;
+    padding: 0 10px;
+    gap: 25px;
+  }
+
+  .detail-card {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .detail-card h3 {
+    font-size: 18px;
+  }
+
+  .detail-card h4 {
+    font-size: 15px;
+  }
+
+  .detail-card p {
+    font-size: 14px;
+  }
+
+  .tags span {
+    font-size: 12px;
+    padding: 3px 8px;
   }
 }
 
-/* 📱 TABLET LAYOUT (900px and below) */
-@media (max-width: 900px) {
-  .about-section,
-  .project-section,
-  .contact-card,
-  .resume-card {
-    flex-direction: column !important;
-    text-align: center !important;
-    gap: 30px !important;
+/* Extra small screens (below 420px) */
+@media (max-width: 420px) {
+  .experience-title {
+    font-size: 32px;
   }
 
-  .about-left,
-  .about-right,
-  .project-left,
-  .project-right,
-  .contact-left,
-  .contact-right {
-    width: 100% !important;
+  .section-label {
+    font-size: 22px;
   }
 
-  .hero-title {
-    font-size: 60px !important;
+  .mini-content h4 {
+    font-size: 14px;
   }
 
-  .hero-subtitle {
-    font-size: 22px !important;
-  }
-
-  .hero-tagline {
-    font-size: 18px !important;
-  }
-
-  .hero-ai-card {
-    width: 80% !important;
-    margin-top: 50px;
-  }
-
-  .skills-grid,
-  .services-grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
-    gap: 25px !important;
-  }
-}
-
-/* 📱 MOBILE PHONES (600px and below) */
-@media (max-width: 600px) {
-  .home-wrapper {
-    flex-direction: column !important;
-    padding: 100px 20px !important;
-    height: auto !important;
-    text-align: center !important;
-  }
-
-  .hero-title {
-    font-size: 42px !important;
-    line-height: 1.1 !important;
-  }
-
-  .hero-subtitle {
-    font-size: 18px !important;
-  }
-
-  .hero-tagline {
-    font-size: 16px !important;
-  }
-
-  .hero-ai-card {
-    width: 95% !important;
-    padding: 24px !important;
-  }
-
-  .about-container,
-  .projects-wrapper,
-  .services-container,
-  .resume-page,
-  .contact-page {
-    padding: 80px 20px !important;
-  }
-
-  .stats-row {
-    flex-direction: column !important;
-    gap: 20px !important;
-  }
-
-  .stat-box {
-    width: 100% !important;
-  }
-
-  .resume-viewer {
-    height: 420px !important;
-    max-width: 100% !important;
-  }
-
-  .form-row {
-    flex-direction: column !important;
-  }
-
-  .project-section {
-    padding: 30px !important;
-  }
-
-  .skill-card {
-    padding: 16px !important;
-  }
-
-  .contact-form input,
-  .contact-form textarea {
-    font-size: 14px !important;
+  .mini-content p {
+    font-size: 12px;
   }
 }
