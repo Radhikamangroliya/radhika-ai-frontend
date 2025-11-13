@@ -4,12 +4,12 @@
 
 .projects-wrapper {
   padding: 120px 80px;
-  background: #0b0c10; /* ✅ same matte black as About */
+  background: #0b0c10; /* matte black */
   color: white;
 }
 
 /* ============================================= */
-/* TITLES — SAME STYLE AS ABOUT */
+/* TITLES */
 /* ============================================= */
 
 .projects-title {
@@ -17,14 +17,14 @@
   text-align: center;
   font-weight: 800;
   margin-bottom: 10px;
-  color: #8ab4ff; /* SAME BLUE as Projects title */
-  text-shadow: 0 0 18px rgba(138, 180, 255, 0.55);
+  color: #8ab4ff;
+  text-shadow: 0 0 18px rgba(138,180,255,0.55);
 }
 
 .projects-sub {
   text-align: center;
   font-size: 20px;
-  color: #b7cfff; /* ✅ same as About subtitle */
+  color: #b7cfff;
   margin-bottom: 70px;
 }
 
@@ -34,44 +34,42 @@
   font-weight: 800;
   margin: 40px 0 35px;
   padding-left: 10px;
-  color: #cfe7ff; /* ✅ same blue family as About */
-  text-shadow: 0 0 16px #65b3ff; 
-  border-left: 4px solid #65b3ff; /* left glow bar */
+  color: #cfe7ff;
+  text-shadow: 0 0 16px #65b3ff;
+  border-left: 4px solid #65b3ff;
 }
 
 /* ============================================= */
-/* PROJECT GLASS CARD — MATCH ABOUT SKILL CARDS */
+/* PROJECT GLASS CARD */
 /* ============================================= */
 
 .project-section {
+  width: 100%;
+  max-width: 1100px;        /* 🟦 keeps wide on desktop */
+  margin: 0 auto 90px;      /* 🟦 centers perfectly */
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 60px;
 
-  margin-bottom: 100px;
   padding: 45px;
   border-radius: 22px;
 
-  background: rgba(255, 255, 255, 0.05);  /* ✅ same as Skill Card */
-  border: 1px solid rgba(120, 160, 255, 0.25); /* ✅ same border */
-  box-shadow: 0 0 15px rgba(90, 150, 255, 0.12); /* ✅ soft glow */
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(120,160,255,0.25);
+  box-shadow: 0 0 15px rgba(90,150,255,0.12);
   backdrop-filter: blur(20px);
 
   transition: 0.3s;
 }
 
-/* Hover */
 .project-section:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 22px rgba(110, 180, 255, 0.35); /* ✅ same hover glow */
-  border-color: rgba(138, 180, 255, 0.4);
+  box-shadow: 0 0 22px rgba(110,180,255,0.35);
+  border-color: rgba(138,180,255,0.4);
 }
 
-/* ============================================= */
-/* LEFT SIDE CONTENT — COLOR MATCH ABOUT TEXT */
-/* ============================================= */
-
+/* LEFT SECTION */
 .project-left {
   width: 50%;
 }
@@ -81,19 +79,16 @@
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 15px;
-  color: #e3edff; /* ✅ same as About body headings */
+  color: #e3edff;
 }
 
 .project-desc {
   font-size: 18px;
   line-height: 1.6;
-  color: #bcd4ff; /* ✅ similar to About paragraph color */
+  color: #bcd4ff;
 }
 
-/* ============================================= */
-/* TAGS — MATCHING BLUE ACCENTS */
-/* ============================================= */
-
+/* TAGS */
 .project-tags {
   margin: 20px 0;
   display: flex;
@@ -102,23 +97,20 @@
 }
 
 .tag {
-  background: rgba(120, 160, 255, 0.12);
-  border: 1px solid rgba(120, 160, 255, 0.4);
+  background: rgba(120,160,255,0.12);
+  border: 1px solid rgba(120,160,255,0.4);
   padding: 6px 14px;
   border-radius: 20px;
   font-size: 14px;
   color: #cde7ff;
 }
 
-/* ============================================= */
-/* PROJECT BUTTON — MATCH ABOUT BUTTON */
-/* ============================================= */
-
+/* BUTTON */
 .project-btn {
   display: inline-block;
   margin-top: 15px;
   padding: 12px 28px;
-  background: rgba(50, 90, 255, 0.12);
+  background: rgba(50,90,255,0.12);
   border: 1px solid #6cb8ff;
   color: #cde7ff;
   border-radius: 10px;
@@ -127,15 +119,12 @@
 }
 
 .project-btn:hover {
-  background: rgba(60, 120, 255, 0.25);
+  background: rgba(60,120,255,0.25);
   box-shadow: 0 0 15px #79c0ff;
   transform: translateY(-3px);
 }
 
-/* ============================================= */
-/* RIGHT SIDE IMAGE */
-/* ============================================= */
-
+/* RIGHT SECTION (IMAGE) */
 .project-right {
   width: 45%;
 }
@@ -156,30 +145,64 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* 3D Hover */
 .img-tilt:hover img {
   transform: rotateY(12deg) rotateX(6deg) scale(1.03);
   box-shadow: 0 20px 40px rgba(0,0,0,0.5);
 }
 
 /* ============================================= */
-/* RESPONSIVE */
+/* 🔥 PERFECT MOBILE FIX — LARGE + BEAUTIFUL */
 /* ============================================= */
 
 @media (max-width: 900px) {
+
+  .projects-wrapper {
+    padding: 100px 25px;
+  }
+
   .project-section {
-    flex-direction: column;
+    width: 100%;
+    max-width: 95%;          /* 🟦 No thin layout */
+    margin: 0 auto 60px;
+
+    flex-direction: column;  /* Stack */
+    justify-content: center;
     text-align: center;
-    gap: 30px;
+
+    padding: 32px;           /* 🟦 More compact but clean */
+    gap: 35px;
   }
 
   .project-left,
   .project-right {
-    width: 100%;
+    width: 100%;             /* 🟦 full width */
+  }
+
+  .project-left h2,
+  .project-left h3 {
+    font-size: 26px;
+  }
+
+  .project-desc {
+    font-size: 15px;
+    line-height: 1.55;
   }
 
   .category-title {
-    font-size: 28px;
-    padding-left: 5px;
+    font-size: 26px;
+    border-left: none;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .tag {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .project-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
   }
 }

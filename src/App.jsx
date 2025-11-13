@@ -15,9 +15,12 @@ import AppRouter from "./router.jsx";
 // ✅ Floating Chat Assistant (always visible)
 import ChatWidget from "./components/ChatWidget.jsx";
 
+
+
 export default function App() {
   return (
     <>
+    
       {/* Main Route System */}
       <AppRouter />
 
