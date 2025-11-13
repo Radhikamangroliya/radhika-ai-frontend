@@ -173,3 +173,83 @@
     transform: translateY(0) scale(1) rotate(0deg);
   }
 }
+
+
+
+/* ===================== ABOUT — MOBILE FIX ===================== */
+@media (max-width: 768px) {
+
+  /* MAIN ROW → stack vertically (IMAGE FIRST) */
+  .about-section {
+    flex-direction: column-reverse !important;
+    text-align: center;
+    gap: 35px !important;
+    margin-top: 40px !important;
+  }
+
+  /* IMAGE — big & centered */
+  .about-right {
+    width: 100% !important;
+    display: flex;
+    justify-content: center !important;
+  }
+
+  .about-right img {
+    max-width: 260px !important;
+    width: 80% !important;
+    height: auto;
+  }
+
+  /* TEXT CONTENT (Who I Am + paragraphs) */
+  .about-left {
+    width: 100% !important;
+    text-align: left !important;
+  }
+
+  .about-text {
+    font-size: 15px !important;
+    line-height: 1.55 !important;
+    text-align: left !important;
+  }
+
+  /* HEADING + SUBTITLE */
+  .about-title {
+    font-size: 34px !important;
+    margin-top: 10px !important;
+  }
+
+  .about-sub {
+    font-size: 16px !important;
+    padding: 0 18px;
+  }
+
+  /* DOWNLOAD BUTTON */
+  .resume-button {
+    width: auto;
+    margin-top: 20px !important;
+    font-size: 15px;
+    padding: 10px 22px;
+  }
+
+  /* STATS → one per row */
+  .stats-row {
+    flex-direction: column !important;
+    gap: 20px !important;
+    margin-top: 50px !important;
+  }
+
+  /* SKILLS GRID → show 2 cards at a time */
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 18px !important;
+    padding: 0 10px;
+  }
+
+  .skill-card {
+    padding: 14px !important;
+  }
+
+  .skill-card p {
+    font-size: 13px !important;
+  }
+}
